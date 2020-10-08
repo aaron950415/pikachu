@@ -536,7 +536,7 @@ let show=() => {
         .nose:hover{
             transform-origin: center bottom;
             animation: wave 300ms infinite linear;
-          }hover1`;
+          }`;
         style[0].innerHTML = string2;
         n += 5;
       }
