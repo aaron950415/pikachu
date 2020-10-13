@@ -562,16 +562,20 @@ let slow=document.querySelector('.slow')
 let stop=document.querySelector('.stop')
 let run=document.querySelector('.run')
 let fast=document.querySelector('.fast')
+let clear=document.querySelector('.clear')
 slow.onclick=()=>{
     clearTimeout(time)
     a=10;
     c=c+a
     time=setTimeout(show(),c)
 }
+let i=2,j=1;
 stop.onclick=()=>{
+  i--
     clearTimeout(time)
 }
 run.onclick=()=>{
+  if(i!==j){return}
     time=setTimeout(show(),c)
 }
 let b;
@@ -581,4 +585,12 @@ fast.onclick=()=>{
     b=10;
     c=c-b
     time=setTimeout(show,c)
+}
+clear.onclick=()=>{
+  clearTimeout(time)
+  string2='';
+  string3='';
+  n=0;
+  content.innerHTML = '';
+  style[0].innerHTML=string2
 }
